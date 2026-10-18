@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14532d">
+  <meta name="description" content="Official citizen information and service links for Tarakpur Gram Panchayat, Kadamtala R.D. Block, North Tripura.">
+  <title>Tarakpur Gram Panchayat | তারকপুর গ্রাম পঞ্চায়েত</title>
+  <style>
+    :root { --green:#14532d; --green2:#166534; --gold:#f4c95d; --ink:#17211b; --muted:#59665d; --paper:#f6f8f4; --card:#fff; --line:#dce5dc; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Noto Sans Bengali","Nirmala UI",Arial,sans-serif; line-height:1.6; }
+    a { color:var(--green2); }
+    .topbar { background:#0d3b22; color:white; padding:8px 5vw; font-size:.9rem; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    header { background:linear-gradient(120deg,#14532d,#237343); color:white; padding:28px 5vw 30px; }
+    .headrow { max-width:1150px; margin:auto; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { display:flex; align-items:center; gap:16px; }
+    .seal { width:76px; height:76px; border-radius:50%; background:#fff; display:grid; place-items:center; overflow:hidden; flex-shrink:0; border:3px solid var(--gold); }
+    .seal img { width:100%; height:100%; object-fit:cover; }
+    .official-logos { max-width:1150px; margin:18px auto 0; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; }
+    .official-logos img { width:auto; height:58px; max-width:150px; object-fit:contain; background:#fff; border-radius:9px; padding:5px; }
+    .office-photo { width:100%; max-height:390px; object-fit:cover; border-radius:16px; border:1px solid var(--line); display:block; }
+    .logo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+    .logo-card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:15px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; }
+    .logo-card img { width:100%; height:100px; object-fit:contain; }
+    .logo-card strong { font-size:.9rem; }
+    .about-copy { background:white; border:1px solid var(--line); border-radius:16px; padding:22px; }
+    .about-copy p { margin-top:0; }
+    .profile-intro { font-size:1.04rem; color:#34463a; }
+    .stats-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:18px 0 22px; }
+    .stat { border:1px solid #d9e8d9; background:#f2f8f1; border-radius:14px; padding:15px 12px; text-align:center; }
+    .stat strong { display:block; font-size:1.65rem; color:#14532d; line-height:1.25; }
+    .stat span { display:block; font-size:.9rem; color:#536456; margin-top:4px; }
+    .initiative-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .initiative { border:1px solid var(--line); border-radius:13px; padding:15px; background:#fff; }
+    .initiative .symbol { font-size:1.55rem; margin-bottom:5px; }
+    .initiative strong { display:block; color:#17472a; }
+    .contact-strip { background:#14532d; color:white; border-radius:14px; padding:17px 19px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:20px; }
+    .contact-strip a { color:white; font-weight:700; overflow-wrap:anywhere; }
+    @media(max-width:700px) { .stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .initiative-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:420px) { .initiative-grid { grid-template-columns:1fr; } }
+    h1 { font-size:clamp(1.5rem,3vw,2.25rem); line-height:1.25; margin:0 0 5px; }
+    .subtitle { margin:0; opacity:.92; }
+    button, .button { border:0; border-radius:10px; padding:11px 15px; font:inherit; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; justify-content:center; align-items:center; gap:8px; }
+    .language { background:#fff; color:var(--green); white-space:nowrap; }
+    nav { background:white; border-bottom:1px solid var(--line); padding:0 5vw; }
+    nav .navinner { max-width:1150px; margin:auto; display:flex; flex-wrap:wrap; gap:4px; }
+    nav a { color:var(--ink); text-decoration:none; padding:13px 12px; font-weight:650; font-size:.95rem; }
+    nav a:hover { background:#edf5ee; }
+    main { max-width:1150px; margin:auto; padding:28px 5vw 50px; }
+    .hero { background:#e8f2e8; border:1px solid #d5e6d5; border-radius:20px; padding:clamp(22px,4vw,40px); display:grid; grid-template-columns:1.5fr 1fr; gap:24px; align-items:center; }
+    .hero h2 { font-size:clamp(1.5rem,3vw,2.2rem); line-height:1.25; margin:0 0 12px; color:#123e25; }
+    .hero p { color:#34463a; margin:0 0 18px; }
+    .hero-art { min-height:170px; display:grid; place-items:center; border-radius:16px; background:linear-gradient(140deg,#d3e8d3,#f7edc7); color:#14532d; text-align:center; padding:20px; }
+    .hero-art .icon { font-size:4rem; display:block; }
+    .section-title { margin:34px 0 15px; display:flex; justify-content:space-between; align-items:end; gap:12px; }
+    .section-title h2 { margin:0; font-size:1.45rem; }
+    .section-title p { margin:0; color:var(--muted); font-size:.95rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:0 3px 12px #15351a08; display:flex; flex-direction:column; align-items:flex-start; }
+    .card .symbol { width:44px; height:44px; display:grid; place-items:center; border-radius:12px; background:#e8f3e8; font-size:1.4rem; margin-bottom:12px; }
+    .card h3 { margin:0 0 7px; font-size:1.1rem; }
+    .card p { margin:0 0 16px; color:var(--muted); font-size:.95rem; flex:1; }
+    .button.primary { background:var(--green); color:white; }
+    .button.secondary { background:#edf5ee; color:var(--green); }
+    .notice { background:#fff8e5; border:1px solid #f0dfaa; border-radius:14px; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .notice strong { display:block; margin-bottom:3px; }
+    .notice p { margin:0; color:#5e5437; }
+    .privacy { color:var(--muted); font-size:.88rem; margin-top:25px; }
+    footer { background:#103d24; color:#fff; padding:25px 5vw; }
+    footer .footinner { max-width:1150px; margin:auto; display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    footer p { margin:3px 0; opacity:.9; }
+    .hidden { display:none !important; }
+    @media(max-width:800px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .hero { grid-template-columns:1fr; } .hero-art { min-height:120px; } }
+    @media(max-width:520px) { .grid { grid-template-columns:1fr; } .headrow { align-items:flex-start; flex-direction:column; } .brand { align-items:flex-start; } .seal { width:52px;height:52px;font-size:1.4rem; } nav a { padding:10px 8px; font-size:.88rem; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span data-en="Government of Tripura · North Tripura" data-bn="ত্রিপুরা সরকার · উত্তর ত্রিপুরা">Government of Tripura · North Tripura</span>
+    <span data-en="Citizen information and online services" data-bn="নাগরিক তথ্য ও অনলাইন পরিষেবা">Citizen information and online services</span>
+  </div>
+  <header>
+    <div class="headrow">
+      <div class="brand">
+        <div class="seal"><img src="assets/tarakpur-gp-logo.jpeg" alt="Tarakpur Gram Panchayat logo"></div>
+        <div>
+          <h1 data-en="Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েত">Tarakpur Gram Panchayat</h1>
+          <p class="subtitle" data-en="Kadamtala R.D. Block, North Tripura, Tripura" data-bn="কদমতলা আর.ডি. ব্লক, উত্তর ত্রিপুরা, ত্রিপুরা">Kadamtala R.D. Block, North Tripura, Tripura</p>
+        </div>
+      </div>
+      <button class="language" id="languageToggle" type="button" aria-label="Switch language">বাংলা দেখুন</button>
+    </div>
+    <div class="official-logos" aria-label="Government and programme logos">
+      <img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura logo">
+      <img src="assets/panchayati-raj-logo.jpeg" alt="Panchayati Raj, Government of India logo">
+      <img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat logo">
+      <img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura logo">
+    </div>
+  </header>
+  <nav aria-label="Main navigation">
+    <div class="navinner">
+      <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+      <a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে">About Us</a>
+      <a href="#services" data-en="Citizen Services" data-bn="নাগরিক পরিষেবা">Citizen Services</a>
+      <a href="#notices" data-en="Notices" data-bn="বিজ্ঞপ্তি">Notices</a>
+      <a href="#gallery" data-en="Development Gallery" data-bn="উন্নয়ন গ্যালারি">Development Gallery</a>
+      <a href="#beneficiaries" data-en="Beneficiary Lists" data-bn="উপভোক্তা তালিকা">Beneficiary Lists</a>
+    </div>
+  </nav>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <h2 data-en="A connected, informed and participatory Tarakpur" data-bn="সংযুক্ত, সচেতন ও অংশগ্রহণমূলক তারকপুর">A connected, informed and participatory Tarakpur</h2>
+        <p data-en="Access Panchayat service forms, submit suggestions or complaints, read public notices and learn about development activities in your village." data-bn="পঞ্চায়েত পরিষেবার আবেদনপত্র ব্যবহার করুন, পরামর্শ বা অভিযোগ জানান, সরকারি বিজ্ঞপ্তি পড়ুন এবং গ্রামের উন্নয়নমূলক কাজ সম্পর্কে জানুন।">Access Panchayat service forms, submit suggestions or complaints, read public notices and learn about development activities in your village.</p>
+        <a class="button primary" href="#services" data-en="Explore Citizen Services ↓" data-bn="নাগরিক পরিষেবা দেখুন ↓">Explore Citizen Services ↓</a>
+      </div>
+      <div class="hero-art">
+        <span>
+          <span class="icon" aria-hidden="true">🏡</span>
+          <strong data-en="Together for village development" data-bn="গ্রামের উন্নয়নে আমরা একসঙ্গে">Together for village development</strong>
+        </span>
+      </div>
+    </section>
+
+    <div class="section-title" id="about">
+      <div>
+        <h2 data-en="About Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েত সম্পর্কে">About Tarakpur Gram Panchayat</h2>
+        <p data-en="Local governance, public services and inclusive village development." data-bn="স্থানীয় শাসন, জনপরিষেবা ও অন্তর্ভুক্তিমূলক গ্রামোন্নয়ন।">Local governance, public services and inclusive village development.</p>
+      </div>
+    </div>
+    <section class="about-copy">
+      <p class="profile-intro" data-en="Established in 1993, Tarakpur Gram Panchayat serves a community of 4,275 people across 800 households and 6 wards. Located in a border village near the India–Bangladesh–Assam tri-junction, under Kadamtala R.D. Block in North Tripura District, the Panchayat is working to make local governance more accessible, responsive and inclusive." data-bn="১৯৯৩ সালে প্রতিষ্ঠিত তারকপুর গ্রাম পঞ্চায়েত ৬টি ওয়ার্ডের ৮০০টি পরিবারের মোট ৪,২৭৫ জন মানুষের পরিষেবায় নিয়োজিত। উত্তর ত্রিপুরা জেলার কদমতলা আর.ডি. ব্লকের অধীন ভারত–বাংলাদেশ–অসম ত্রিসংযোগস্থলের নিকটবর্তী সীমান্তবর্তী গ্রামে অবস্থিত এই পঞ্চায়েত স্থানীয় শাসনব্যবস্থাকে আরও সহজলভ্য, দায়িত্বশীল ও অন্তর্ভুক্তিমূলক করার লক্ষ্যে কাজ করছে।">Established in 1993, Tarakpur Gram Panchayat serves a community of 4,275 people across 800 households and 6 wards. Located in a border village near the India–Bangladesh–Assam tri-junction, under Kadamtala R.D. Block in North Tripura District, the Panchayat is working to make local governance more accessible, responsive and inclusive.</p>
+
+      <div class="stats-grid" aria-label="Tarakpur Gram Panchayat facts">
+        <div class="stat"><strong>1993</strong><span data-en="Established" data-bn="প্রতিষ্ঠিত">Established</span></div>
+        <div class="stat"><strong>4,275</strong><span data-en="Population" data-bn="জনসংখ্যা">Population</span></div>
+        <div class="stat"><strong>800</strong><span data-en="Households" data-bn="পরিবার">Households</span></div>
+        <div class="stat"><strong>6</strong><span data-en="Wards" data-bn="ওয়ার্ড">Wards</span></div>
+      </div>
+
+      <h3 data-en="Our Priorities and Initiatives" data-bn="আমাদের অগ্রাধিকার ও উদ্যোগ">Our Priorities and Initiatives</h3>
+      <div class="initiative-grid">
+        <div class="initiative"><div class="symbol" aria-hidden="true">🌸</div><strong data-en="Model Women Friendly Panchayat" data-bn="মডেল নারী-বান্ধব পঞ্চায়েত">Model Women Friendly Panchayat</strong></div>
+        <div class="initiative"><div class="symbol" aria-hidden="true">💻</div><strong data-en="SMART PANCHAYAT" data-bn="স্মার্ট পঞ্চায়েত">SMART PANCHAYAT</strong></div>
+        <div class="initiative"><div class="symbol" aria-hidden="true">☀️</div><strong data-en="Solar-Powered Panchayat Office" data-bn="সৌরশক্তিচালিত পঞ্চায়েত কার্যালয়">Solar-Powered Panchayat Office</strong></div>
+        <div class="initiative"><div class="symbol" aria-hidden="true">♻️</div><strong data-en="Household Dustbin Distribution" data-bn="বাড়ি বাড়ি ডাস্টবিন বিতরণ">Household Dustbin Distribution</strong></div>
+        <div class="initiative"><div class="symbol" aria-hidden="true">💧</div><strong data-en="Rainwater Harvesting and Soak Pits" data-bn="বৃষ্টির জল সংরক্ষণ ও সোক পিট">Rainwater Harvesting and Soak Pits</strong></div>
+        <div class="initiative"><div class="symbol" aria-hidden="true">🏫</div><strong data-en="Development of Anganwadi Centres" data-bn="অঙ্গনওয়াড়ি কেন্দ্রের উন্নয়ন">Development of Anganwadi Centres</strong></div>
+      </div>
+
+      <h3 data-en="Services for Citizens" data-bn="নাগরিকদের জন্য পরিষেবা">Services for Citizens</h3>
+      <p data-en="The website brings together information and links for certificates and other Panchayat services, grievance redressal, citizen applications, beneficiary information, development works and public notices." data-bn="এই ওয়েবসাইটে শংসাপত্র ও অন্যান্য পঞ্চায়েত পরিষেবা, অভিযোগ নিষ্পত্তি, নাগরিকদের আবেদন, উপভোক্তা সংক্রান্ত তথ্য, উন্নয়নমূলক কাজ এবং জনসাধারণের বিজ্ঞপ্তির তথ্য ও লিঙ্ক একত্রে দেওয়া হয়েছে।">The website brings together information and links for certificates and other Panchayat services, grievance redressal, citizen applications, beneficiary information, development works and public notices.</p>
+
+      <img class="office-photo" src="assets/tarakpur-gp-office.jpeg" alt="Tarakpur Gram Panchayat office building">
+      <div class="contact-strip">
+        <div>
+          <strong data-en="Contact Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েতের সঙ্গে যোগাযোগ করুন">Contact Tarakpur Gram Panchayat</strong>
+          <div data-en="Official email" data-bn="সরকারি ইমেল">Official email</div>
+        </div>
+        <a href="mailto:communicationstarakpurgp@gmail.com">communicationstarakpurgp@gmail.com</a>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <div>
+        <h2 data-en="Government and Programme Initiatives" data-bn="সরকারি ও কর্মসূচির লোগো">Government and Programme Initiatives</h2>
+        <p data-en="Official and programme logos provided for the website." data-bn="ওয়েবসাইটের জন্য সরবরাহ করা সরকারি ও কর্মসূচির লোগো।">Official and programme logos provided for the website.</p>
+      </div>
+    </div>
+    <section class="logo-grid" aria-label="Government and programme logos">
+      <div class="logo-card"><img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura"><strong data-en="Government of Tripura" data-bn="ত্রিপুরা সরকার">Government of Tripura</strong></div>
+      <div class="logo-card"><img src="assets/panchayati-raj-logo.jpeg" alt="Ministry of Panchayati Raj, Government of India"><strong data-en="Ministry of Panchayati Raj, Government of India" data-bn="পঞ্চায়েতি রাজ মন্ত্রক, ভারত সরকার">Ministry of Panchayati Raj, Government of India</strong></div>
+      <div class="logo-card"><img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat"><strong data-en="Model Women Friendly Panchayat" data-bn="মডেল নারী-বান্ধব পঞ্চায়েত">Model Women Friendly Panchayat</strong></div>
+      <div class="logo-card"><img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura"><strong data-en="Amar Sarkar, Government of Tripura" data-bn="আমার সরকার, ত্রিপুরা সরকার">Amar Sarkar, Government of Tripura</strong></div>
+    </section>
+
+    <div class="section-title" id="services">
+      <div>
+        <h2 data-en="Citizen Services" data-bn="নাগরিক পরিষেবা">Citizen Services</h2>
+        <p data-en="Submit your request online using the existing Google Forms." data-bn="বিদ্যমান Google Forms ব্যবহার করে অনলাইনে আপনার আবেদন জমা দিন।">Submit your request online using the existing Google Forms.</p>
+      </div>
+    </div>
+    <section class="grid" aria-label="Citizen service forms">
+      <article class="card">
+        <div class="symbol" aria-hidden="true">💡</div>
+        <h3 data-en="Suggestion and Feedback" data-bn="পরামর্শ ও মতামত">Suggestion and Feedback</h3>
+        <p data-en="Share ideas to improve Panchayat services and village development." data-bn="পঞ্চায়েত পরিষেবা ও গ্রামের উন্নয়ন আরও ভালো করার জন্য আপনার মতামত জানান।">Share ideas to improve Panchayat services and village development.</p>
+        <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdW1C1DJr5yJ56eCBBBWqg-b5GKKP5CvkvKIQeEw62Zqn7q0Q/viewform?usp=header" target="_blank" rel="noopener" data-en="Submit Suggestion ↗" data-bn="পরামর্শ জমা দিন ↗">Submit Suggestion ↗</a>
+      </article>
+      <article class="card">
+        <div class="symbol" aria-hidden="true">📝</div>
+        <h3 data-en="Register a Complaint" data-bn="অভিযোগ জানান">Register a Complaint</h3>
+        <p data-en="Submit a complaint or report a local service issue for review." data-bn="স্থানীয় পরিষেবা সংক্রান্ত সমস্যা বা অভিযোগ পর্যালোচনার জন্য জমা দিন।">Submit a complaint or report a local service issue for review.</p>
+        <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeXjPkI4inzbTNwy8AD8AmemC10Fa93dzbgIrZYR80QSYS7MQ/viewform?usp=header" target="_blank" rel="noopener" data-en="Submit Complaint ↗" data-bn="অভিযোগ জমা দিন ↗">Submit Complaint ↗</a>
+      </article>
+      <article class="card">
+        <div class="symbol" aria-hidden="true">📄</div>
+        <h3 data-en="Apply for a Service" data-bn="পরিষেবার জন্য আবেদন">Apply for a Service</h3>
+        <p data-en="Open the service application form and follow the instructions provided there." data-bn="পরিষেবার আবেদনপত্র খুলুন এবং সেখানে দেওয়া নির্দেশাবলি অনুসরণ করুন।">Open the service application form and follow the instructions provided there.</p>
+        <a class="button primary" href="https://docs.google.com/forms/d/e/1FAIpQLScxkD-JMlA-OeeQ-bAaoI8QL689xVflA8KclDUesvLfW7KTsw/viewform?usp=header" target="_blank" rel="noopener" data-en="Open Application ↗" data-bn="আবেদনপত্র খুলুন ↗">Open Application ↗</a>
+      </article>
+    </section>
+
+    <div class="section-title" id="notices">
+      <div>
+        <h2 data-en="Public Notices" data-bn="জনসাধারণের বিজ্ঞপ্তি">Public Notices</h2>
+        <p data-en="Check the notice folder for current circulars, meeting notices and announcements." data-bn="সাম্প্রতিক বিজ্ঞপ্তি, সভার নোটিশ ও ঘোষণার জন্য বিজ্ঞপ্তির ফোল্ডার দেখুন।">Check the notice folder for current circulars, meeting notices and announcements.</p>
+      </div>
+    </div>
+    <section class="notice">
+      <div>
+        <strong data-en="Tarakpur Gram Panchayat Notice Board" data-bn="তারকপুর গ্রাম পঞ্চায়েত বিজ্ঞপ্তি বোর্ড">Tarakpur Gram Panchayat Notice Board</strong>
+        <p data-en="Documents open from Google Drive. Access depends on the file's sharing settings." data-bn="নথিগুলি Google Drive থেকে খুলবে। ফাইলের শেয়ারিং সেটিংসের উপর প্রবেশাধিকার নির্ভর করবে।">Documents open from Google Drive. Access depends on the file's sharing settings.</p>
+      </div>
+      <a class="button secondary" href="https://drive.google.com/drive/folders/1BHaojLxqJzAfE39BsMGieyd3lrPmligT?usp=sharing" target="_blank" rel="noopener" data-en="Open Notice Folder ↗" data-bn="বিজ্ঞপ্তির ফোল্ডার খুলুন ↗">Open Notice Folder ↗</a>
+    </section>
+
+    <div class="section-title" id="gallery">
+      <div>
+        <h2 data-en="Development Gallery" data-bn="উন্নয়নমূলক কাজের ছবি">Development Gallery</h2>
+        <p data-en="View photographs of public works and Panchayat activities." data-bn="জনসাধারণের কাজ ও পঞ্চায়েতের বিভিন্ন কার্যক্রমের ছবি দেখুন।">View photographs of public works and Panchayat activities.</p>
+      </div>
+    </div>
+    <section class="grid">
+      <article class="card">
+        <div class="symbol" aria-hidden="true">📷</div>
+        <h3 data-en="Photographs of Development Works" data-bn="উন্নয়নমূলক কাজের আলোকচিত্র">Photographs of Development Works</h3>
+        <p data-en="Open the shared folder to view available photographs. Add approved public photographs to this folder to keep it updated." data-bn="উপলব্ধ ছবি দেখতে শেয়ার করা ফোল্ডার খুলুন। আপডেট রাখার জন্য অনুমোদিত জনসাধারণের কাজের ছবি এই ফোল্ডারে যোগ করুন।">Open the shared folder to view available photographs. Add approved public photographs to this folder to keep it updated.</p>
+        <a class="button primary" href="https://drive.google.com/drive/folders/1-pyPiK1Tyo_3RnOm3g6rvk6UXfpdC69N?usp=sharing" target="_blank" rel="noopener" data-en="Open Photo Gallery ↗" data-bn="ছবির গ্যালারি খুলুন ↗">Open Photo Gallery ↗</a>
+      </article>
+    </section>
+
+    <div class="section-title" id="beneficiaries">
+      <div>
+        <h2 data-en="Beneficiary Information" data-bn="উপভোক্তা সংক্রান্ত তথ্য">Beneficiary Information</h2>
+        <p data-en="Use the official folder to consult beneficiary lists made available for public access." data-bn="জনসাধারণের জন্য প্রকাশিত উপভোক্তা তালিকা দেখতে নির্দিষ্ট ফোল্ডারটি ব্যবহার করুন।">Use the official folder to consult beneficiary lists made available for public access.</p>
+      </div>
+    </div>
+    <section class="notice">
+      <div>
+        <strong data-en="Beneficiary List Folder" data-bn="উপভোক্তা তালিকার ফোল্ডার">Beneficiary List Folder</strong>
+        <p data-en="Please verify that each file is intended for public disclosure before sharing it." data-bn="কোনও ফাইল শেয়ার করার আগে সেটি জনসাধারণের জন্য প্রকাশযোগ্য কি না যাচাই করুন।">Please verify that each file is intended for public disclosure before sharing it.</p>
+      </div>
+      <a class="button secondary" href="https://drive.google.com/drive/u/0/folders/1Jmn_tk8_em-SxfUb1oRVm4XKEG0iGCds" target="_blank" rel="noopener" data-en="Open Beneficiary Folder ↗" data-bn="উপভোক্তা তালিকা খুলুন ↗">Open Beneficiary Folder ↗</a>
+    </section>
+
+    <p class="privacy" data-en="Privacy notice: Do not publish Aadhaar numbers, bank account details, personal phone numbers, signatures or other sensitive personal information. Publish only beneficiary information that the competent authority has approved for public disclosure. Submission receipt numbers and acknowledgements are managed by the connected Google Forms and their existing scripts." data-bn="গোপনীয়তা সংক্রান্ত নোটিশ: আধার নম্বর, ব্যাঙ্ক অ্যাকাউন্টের তথ্য, ব্যক্তিগত ফোন নম্বর, স্বাক্ষর বা অন্যান্য সংবেদনশীল ব্যক্তিগত তথ্য প্রকাশ করবেন না। কেবলমাত্র উপযুক্ত কর্তৃপক্ষের অনুমোদিত উপভোক্তা তথ্য প্রকাশ করুন। আবেদন গ্রহণ নম্বর ও স্বীকৃতিপত্র সংযুক্ত Google Forms এবং তার বিদ্যমান স্ক্রিপ্টের মাধ্যমে পরিচালিত হবে।">Privacy notice: Do not publish Aadhaar numbers, bank account details, personal phone numbers, signatures or other sensitive personal information. Publish only beneficiary information that the competent authority has approved for public disclosure. Submission receipt numbers and acknowledgements are managed by the connected Google Forms and their existing scripts.</p>
+  </main>
+  <footer>
+    <div class="footinner">
+      <div>
+        <strong data-en="Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েত">Tarakpur Gram Panchayat</strong>
+        <p data-en="Kadamtala R.D. Block, North Tripura, Tripura" data-bn="কদমতলা আর.ডি. ব্লক, উত্তর ত্রিপুরা, ত্রিপুরা">Kadamtala R.D. Block, North Tripura, Tripura</p>
+      </div>
+      <div>
+        <p data-en="A citizen information website hosted on GitHub Pages." data-bn="GitHub Pages-এ হোস্ট করা নাগরিক তথ্যের ওয়েবসাইট।">A citizen information website hosted on GitHub Pages.</p>
+        <p>© <span id="year"></span> <span data-en="Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েত">Tarakpur Gram Panchayat</span></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('languageToggle');
+    let currentLanguage = 'en';
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language === 'bn' ? 'bn' : 'en';
+      document.querySelectorAll('[data-en][data-bn]').forEach(el => {
+        el.textContent = el.dataset[language];
+      });
+      toggle.textContent = language === 'en' ? 'বাংলা দেখুন' : 'View in English';
+      toggle.setAttribute('aria-label', language === 'en' ? 'Switch to Bengali' : 'Switch to English');
+    }
+    toggle.addEventListener('click', () => setLanguage(currentLanguage === 'en' ? 'bn' : 'en'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
