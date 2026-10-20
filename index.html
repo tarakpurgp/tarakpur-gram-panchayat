@@ -17,9 +17,9 @@
     .brand { display:flex; align-items:center; gap:16px; }
     .seal { width:76px; height:76px; border-radius:50%; background:#fff; display:grid; place-items:center; overflow:hidden; flex-shrink:0; border:3px solid var(--gold); }
     .seal img { width:100%; height:100%; object-fit:cover; }
-    .official-logos { max-width:1150px; margin:18px auto 0; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; }
+    .official-logos { max-width:1150px; margin:14px auto 0; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; }
     .official-logos img { width:auto; height:58px; max-width:150px; object-fit:contain; background:#fff; border-radius:9px; padding:5px; }
-    .header-leadership { max-width:1150px; margin:20px auto 0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .header-leadership { max-width:1150px; margin:0 auto 14px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
     .header-leader { min-width:0; display:flex; align-items:center; gap:10px; padding:10px; background:#ffffff18; border:1px solid #ffffff55; border-radius:12px; color:white; }
     .header-leader img { width:54px; height:68px; object-fit:cover; object-position:top center; border-radius:7px; background:#fff; flex-shrink:0; }
     .header-leader strong { display:block; font-size:.88rem; line-height:1.25; }
@@ -43,6 +43,12 @@
     .leader-photo img { width:100%; height:100%; object-fit:cover; border-radius:8px; }
     .leader-card strong { display:block; }
     .leader-card p { color:var(--muted); font-size:.9rem; margin:6px 0 0; }
+    .local-leaders { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:18px 0 24px; }
+    .local-leader { display:flex; align-items:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; }
+    .local-leader img { width:112px; height:132px; object-fit:cover; object-position:center top; border-radius:10px; flex-shrink:0; }
+    .local-leader strong { display:block; font-size:1rem; }
+    .local-leader span { display:block; color:var(--muted); font-size:.9rem; margin-top:4px; }
+    @media(max-width:600px) { .local-leaders { grid-template-columns:1fr; } .local-leader img { width:94px; height:116px; } }
     .initiative-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
     .initiative { border:1px solid var(--line); border-radius:13px; padding:15px; background:#fff; }
     .initiative .symbol { font-size:1.55rem; margin-bottom:5px; }
@@ -93,6 +99,19 @@
     <span data-en="Citizen information and online services" data-bn="নাগরিক তথ্য ও অনলাইন পরিষেবা">Citizen information and online services</span>
   </div>
   <header>
+    <div class="header-leadership" aria-label="National and state leadership">
+      <div class="header-leader"><img src="assets/prime-minister-narendra-modi.jpg" alt="Shri Narendra Modi"><div><strong data-en="Shri Narendra Modi" data-bn="শ্রী নরেন্দ্র মোদি">Shri Narendra Modi</strong><span data-en="Prime Minister of India" data-bn="ভারতের প্রধানমন্ত্রী">Prime Minister of India</span></div></div>
+      <div class="header-leader"><img src="assets/rajiv-ranjan-singh.jpeg" alt="Shri Rajiv Ranjan Singh"><div><strong data-en="Shri Rajiv Ranjan Singh" data-bn="শ্রী রাজীব রঞ্জন সিং">Shri Rajiv Ranjan Singh</strong><span data-en="Union Cabinet Minister of Panchayati Raj" data-bn="কেন্দ্রীয় পঞ্চায়েতি রাজ মন্ত্রী">Union Cabinet Minister of Panchayati Raj</span></div></div>
+      <div class="header-leader"><img src="assets/chief-minister-manik-saha.jpg" alt="Prof. (Dr.) Manik Saha"><div><strong data-en="Prof. (Dr.) Manik Saha" data-bn="অধ্যাপক (ড.) মানিক সাহা">Prof. (Dr.) Manik Saha</strong><span data-en="Chief Minister of Tripura" data-bn="ত্রিপুরার মুখ্যমন্ত্রী">Chief Minister of Tripura</span></div></div>
+      <div class="header-leader"><img src="assets/kishor-barman.jpg" alt="Shri Kishor Barman"><div><strong data-en="Shri Kishor Barman" data-bn="শ্রী কিশোর বর্মন">Shri Kishor Barman</strong><span data-en="Cabinet Minister, Government of Tripura" data-bn="মন্ত্রিসভার মন্ত্রী, ত্রিপুরা সরকার">Cabinet Minister, Government of Tripura</span></div></div>
+    </div>
+    <div class="official-logos" aria-label="Government and programme logos">
+      <a href="https://panchayat.tripura.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Panchayat Department, Government of Tripura"><img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura logo"></a>
+      <a href="https://panchayat.gov.in/en/" target="_blank" rel="noopener noreferrer" aria-label="Ministry of Panchayati Raj, Government of India"><img src="assets/panchayati-raj-logo.jpeg" alt="Panchayati Raj, Government of India logo"></a>
+      <img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat logo">
+      <a href="https://aamarsarkar.tripura.gov.in/signin.php" target="_blank" rel="noopener noreferrer" aria-label="Amar Sarkar portal"><img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura logo"></a>
+    </div>
+
     <div class="headrow">
       <div class="brand">
         <div class="seal"><img src="assets/tarakpur-gp-logo.jpeg" alt="Tarakpur Gram Panchayat logo"></div>
@@ -103,25 +122,14 @@
       </div>
       <button class="language" id="languageToggle" type="button" aria-label="Switch language">বাংলা দেখুন</button>
     </div>
-    <div class="official-logos" aria-label="Government and programme logos">
-      <a href="https://panchayat.tripura.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Panchayat Department, Government of Tripura"><img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura logo"></a>
-      <a href="https://panchayat.gov.in/en/" target="_blank" rel="noopener noreferrer" aria-label="Ministry of Panchayati Raj, Government of India"><img src="assets/panchayati-raj-logo.jpeg" alt="Panchayati Raj, Government of India logo"></a>
-      <img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat logo">
-      <a href="https://aamarsarkar.tripura.gov.in/signin.php" target="_blank" rel="noopener noreferrer" aria-label="Amar Sarkar portal"><img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura logo"></a>
-    </div>
-    <div class="header-leadership-title" data-en="Leadership and Governance" data-bn="নেতৃত্ব ও প্রশাসন">Leadership and Governance</div>
-    <div class="header-leadership" aria-label="National and state leadership">
-      <div class="header-leader"><img src="assets/prime-minister-narendra-modi.jpg" alt="Shri Narendra Modi"><div><strong data-en="Shri Narendra Modi" data-bn="শ্রী নরেন্দ্র মোদি">Shri Narendra Modi</strong><span data-en="Prime Minister of India" data-bn="ভারতের প্রধানমন্ত্রী">Prime Minister of India</span></div></div>
-      <div class="header-leader"><img src="assets/rajiv-ranjan-singh.jpeg" alt="Shri Rajiv Ranjan Singh"><div><strong data-en="Shri Rajiv Ranjan Singh" data-bn="শ্রী রাজীব রঞ্জন সিং">Shri Rajiv Ranjan Singh</strong><span data-en="Union Cabinet Minister of Panchayati Raj" data-bn="কেন্দ্রীয় পঞ্চায়েতি রাজ মন্ত্রী">Union Cabinet Minister of Panchayati Raj</span></div></div>
-      <div class="header-leader"><img src="assets/chief-minister-manik-saha.jpg" alt="Prof. (Dr.) Manik Saha"><div><strong data-en="Prof. (Dr.) Manik Saha" data-bn="অধ্যাপক (ড.) মানিক সাহা">Prof. (Dr.) Manik Saha</strong><span data-en="Chief Minister of Tripura" data-bn="ত্রিপুরার মুখ্যমন্ত্রী">Chief Minister of Tripura</span></div></div>
-      <div class="header-leader"><img src="assets/kishor-barman.jpg" alt="Shri Kishor Barman"><div><strong data-en="Shri Kishor Barman" data-bn="শ্রী কিশোর বর্মন">Shri Kishor Barman</strong><span data-en="Cabinet Minister, Government of Tripura" data-bn="মন্ত্রিসভার মন্ত্রী, ত্রিপুরা সরকার">Cabinet Minister, Government of Tripura</span></div></div>
-    </div>
+
   </header>
   <nav aria-label="Main navigation">
     <div class="navinner">
       <a href="#home" data-en="Home" data-bn="হোম">Home</a>
       <a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে">About Us</a>
       <a href="#statistics" data-en="Statistics" data-bn="পরিসংখ্যান">Statistics</a>
+      <a href="#map" data-en="GP Map & Location" data-bn="পঞ্চায়েত মানচিত্র ও অবস্থান">GP Map &amp; Location</a>
       <a href="#leadership" data-en="Leadership" data-bn="নেতৃত্ব">Leadership</a>
       <a href="#services" data-en="Citizen Services" data-bn="নাগরিক পরিষেবা">Citizen Services</a>
       <a href="#notices" data-en="Notices" data-bn="বিজ্ঞপ্তি">Notices</a>
@@ -151,7 +159,7 @@
       </div>
     </div>
     <section class="about-copy">
-      <p class="profile-intro" data-en="Established in 1993, Tarakpur Gram Panchayat serves a community of 4,275 people across 800 households and 6 wards. Located in a border village near the India–Bangladesh–Assam tri-junction, under Kadamtala R.D. Block in North Tripura District, the Panchayat is working to make local governance more accessible, responsive and inclusive." data-bn="১৯৯৩ সালে প্রতিষ্ঠিত তারকপুর গ্রাম পঞ্চায়েত ৬টি ওয়ার্ডের ৮০০টি পরিবারের মোট ৪,২৭৫ জন মানুষের পরিষেবায় নিয়োজিত। উত্তর ত্রিপুরা জেলার কদমতলা আর.ডি. ব্লকের অধীন ভারত–বাংলাদেশ–অসম ত্রিসংযোগস্থলের নিকটবর্তী সীমান্তবর্তী গ্রামে অবস্থিত এই পঞ্চায়েত স্থানীয় শাসনব্যবস্থাকে আরও সহজলভ্য, দায়িত্বশীল ও অন্তর্ভুক্তিমূলক করার লক্ষ্যে কাজ করছে।">Established in 1993, Tarakpur Gram Panchayat serves a community of 4,275 people across 800 households and 6 wards. Located in a border village near the India–Bangladesh–Assam tri-junction, under Kadamtala R.D. Block in North Tripura District, the Panchayat is working to make local governance more accessible, responsive and inclusive.</p>
+      <p class="profile-intro" data-en="Tarakpur Gram Panchayat is under Kadamtala R.D. Block in North Tripura district, approximately 5 kilometres north-west of the block headquarters. It covers about 4.8 square kilometres and comprises 6 wards. The Panchayat shares borders with Assam and neighbouring Bangladesh. Bengali is the primary language, while the Bhil and Munda communities enrich the area’s languages and cultural traditions. Agriculture, fishing and forest resources are important livelihoods for local families. The historic Kalachand Milan Mandir is a locally respected place of spirituality and heritage, bringing people together in a spirit of unity." data-bn="তারকপুর গ্রাম পঞ্চায়েত উত্তর ত্রিপুরা জেলার কদমতলা আর.ডি. ব্লকের অধীন এবং ব্লক সদর দপ্তরের প্রায় ৫ কিলোমিটার উত্তর-পশ্চিমে অবস্থিত। পঞ্চায়েতটির মোট আয়তন প্রায় ৪.৮ বর্গকিলোমিটার এবং এতে ৬টি ওয়ার্ড রয়েছে। একদিকে অসম রাজ্য এবং অন্যদিকে প্রতিবেশী বাংলাদেশ এই এলাকার সীমানা সংলগ্ন। এখানে বাংলা প্রধান ভাষা হলেও ভিল ও মুন্ডা সম্প্রদায়ের নিজস্ব ভাষা ও সংস্কৃতিও এই অঞ্চলের বৈচিত্র্যকে সমৃদ্ধ করেছে। কৃষিকাজ, মাছ ধরা এবং বনজ সম্পদ স্থানীয় মানুষের জীবিকার গুরুত্বপূর্ণ উৎস। ঐতিহাসিক কালাচাঁদ মিলন মন্দির স্থানীয় আধ্যাত্মিকতা ও ঐতিহ্যের প্রতীক হিসেবে পরিচিত এবং মানুষের মধ্যে ঐক্যের বার্তা বহন করে।">Tarakpur Gram Panchayat is under Kadamtala R.D. Block in North Tripura district, approximately 5 kilometres north-west of the block headquarters. It covers about 4.8 square kilometres and comprises 6 wards. The Panchayat shares borders with Assam and neighbouring Bangladesh. Bengali is the primary language, while the Bhil and Munda communities enrich the area’s languages and cultural traditions. Agriculture, fishing and forest resources are important livelihoods for local families. The historic Kalachand Milan Mandir is a locally respected place of spirituality and heritage, bringing people together in a spirit of unity.</p>
 
       <div class="stats-grid" aria-label="Tarakpur Gram Panchayat facts">
         <div class="stat"><strong>1993</strong><span data-en="Established" data-bn="প্রতিষ্ঠিত">Established</span></div>
@@ -196,6 +204,39 @@
       <div class="stat"><strong>50</strong><span data-en="Self-Help Groups (SHGs)" data-bn="স্বনির্ভর গোষ্ঠী (SHG)">Self-Help Groups (SHGs)</span></div>
       <div class="stat"><strong>2</strong><span data-en="Village Organisations" data-bn="গ্রাম সংগঠন">Village Organisations</span></div>
       <div class="stat"><strong>34</strong><span data-en="Solar and LED Streetlights" data-bn="সৌর ও LED পথবাতি">Solar and LED Streetlights</span></div>
+      <div class="stat"><strong>104022</strong><span data-en="LGD Code" data-bn="এলজিডি কোড">LGD Code</span></div>
+      <div class="stat"><strong>11</strong><span data-en="Public Representatives" data-bn="জনপ্রতিনিধি">Public Representatives</span></div>
+      <div class="stat"><strong>557</strong><span data-en="Total Job Cards" data-bn="মোট জব কার্ড">Total Job Cards</span></div>
+      <div class="stat"><strong>1</strong><span data-en="Tarakpur Higher Secondary School" data-bn="তারকপুর উচ্চমাধ্যমিক বিদ্যালয়">Tarakpur Higher Secondary School</span></div>
+      <div class="stat"><strong>1</strong><span data-en="Tarakpur Health Sub-Centre" data-bn="তারকপুর স্বাস্থ্য উপকেন্দ্র">Tarakpur Health Sub-Centre</span></div>
+    </section>
+    <div class="section-title" id="map">
+      <div>
+        <h2 data-en="Map and Location of Tarakpur Gram Panchayat" data-bn="তারকপুর গ্রাম পঞ্চায়েতের মানচিত্র ও অবস্থান">Map and Location of Tarakpur Gram Panchayat</h2>
+        <p data-en="Ward boundaries and nearby bordering areas are shown in the Panchayat map. Open Google Maps for the location." data-bn="পঞ্চায়েতের মানচিত্রে ওয়ার্ডের সীমানা ও সংলগ্ন এলাকার অবস্থান দেখানো হয়েছে। অবস্থান দেখতে Google Maps খুলুন।">Ward boundaries and nearby bordering areas are shown in the Panchayat map. Open Google Maps for the location.</p>
+      </div>
+    </div>
+    <section class="resource-card" aria-label="Tarakpur Gram Panchayat map and location">
+      <img src="assets/tarakpur-gp-map.jpeg" alt="Map of Tarakpur Gram Panchayat showing its six wards and bordering areas" style="display:block;width:100%;height:auto;max-height:780px;object-fit:contain;border-radius:12px;margin-bottom:18px;">
+      <p data-en="The map is provided for public information about the Panchayat and its wards." data-bn="পঞ্চায়েত ও ওয়ার্ড সম্পর্কে জনসাধারণের তথ্যের জন্য এই মানচিত্র দেওয়া হয়েছে।">The map is provided for public information about the Panchayat and its wards.</p>
+      <a class="button" href="https://maps.app.goo.gl/wgaxstA4aUbtL1dx6" target="_blank" rel="noopener noreferrer" data-en="Open Tarakpur Gram Panchayat in Google Maps ↗" data-bn="Google Maps-এ তারকপুর গ্রাম পঞ্চায়েত দেখুন ↗">Open Tarakpur Gram Panchayat in Google Maps ↗</a>
+    </section>
+
+    <div class="section-title">
+      <div>
+        <h2 data-en="Panchayat Leadership" data-bn="পঞ্চায়েত নেতৃত্ব">Panchayat Leadership</h2>
+        <p data-en="The elected leadership serving Tarakpur Gram Panchayat." data-bn="তারকপুর গ্রাম পঞ্চায়েতের নির্বাচিত নেতৃত্ব।">The elected leadership serving Tarakpur Gram Panchayat.</p>
+      </div>
+    </div>
+    <section class="local-leaders" aria-label="Tarakpur Gram Panchayat elected leadership">
+      <article class="local-leader">
+        <img src="assets/pradhan-subhadhani-nama.jpeg" alt="Smt. Subhadhani Nama Pradhan, Pradhan of Tarakpur Gram Panchayat">
+        <div><strong data-en="Smt. Subhadhani Nama Pradhan" data-bn="শ্রীমতী শুভধনী নমঃ প্রধান">Smt. Subhadhani Nama Pradhan</strong><span data-en="Pradhan, Tarakpur Gram Panchayat" data-bn="প্রধান, তারকপুর গ্রাম পঞ্চায়েত">Pradhan, Tarakpur Gram Panchayat</span></div>
+      </article>
+      <article class="local-leader">
+        <img src="assets/upa-pradhan-sumen-das.jpeg" alt="Shri Sumen Das, Upa-Pradhan of Tarakpur Gram Panchayat">
+        <div><strong data-en="Shri Sumen Das" data-bn="শ্রী সুমেন দাস">Shri Sumen Das</strong><span data-en="Upa-Pradhan, Tarakpur Gram Panchayat" data-bn="উপপ্রধান, তারকপুর গ্রাম পঞ্চায়েত">Upa-Pradhan, Tarakpur Gram Panchayat</span></div>
+      </article>
     </section>
 
     <div class="section-title" id="services">
