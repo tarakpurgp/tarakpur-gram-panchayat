@@ -19,9 +19,15 @@
     .seal img { width:100%; height:100%; object-fit:cover; }
     .official-logos { max-width:1150px; margin:18px auto 0; display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; }
     .official-logos img { width:auto; height:58px; max-width:150px; object-fit:contain; background:#fff; border-radius:9px; padding:5px; }
+    .header-leadership { max-width:1150px; margin:20px auto 0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+    .header-leader { min-width:0; display:flex; align-items:center; gap:10px; padding:10px; background:#ffffff18; border:1px solid #ffffff55; border-radius:12px; color:white; }
+    .header-leader img { width:54px; height:68px; object-fit:cover; object-position:top center; border-radius:7px; background:#fff; flex-shrink:0; }
+    .header-leader strong { display:block; font-size:.88rem; line-height:1.25; }
+    .header-leader span { display:block; font-size:.75rem; line-height:1.3; opacity:.9; margin-top:4px; }
+    .header-leadership-title { max-width:1150px; margin:16px auto 0; font-weight:700; font-size:.95rem; color:#fff; }
     .office-photo { width:100%; max-height:390px; object-fit:cover; border-radius:16px; border:1px solid var(--line); display:block; }
     .logo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
-    .logo-card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:15px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; }
+    .logo-card { color:var(--ink); text-decoration:none; background:#fff; border:1px solid var(--line); border-radius:14px; padding:15px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:10px; }
     .logo-card img { width:100%; height:100px; object-fit:contain; }
     .logo-card strong { font-size:.9rem; }
     .about-copy { background:white; border:1px solid var(--line); border-radius:16px; padding:22px; }
@@ -31,14 +37,20 @@
     .stat { border:1px solid #d9e8d9; background:#f2f8f1; border-radius:14px; padding:15px 12px; text-align:center; }
     .stat strong { display:block; font-size:1.65rem; color:#14532d; line-height:1.25; }
     .stat span { display:block; font-size:.9rem; color:#536456; margin-top:4px; }
+    .leader-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin:16px 0 26px; }
+    .leader-card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px; text-align:center; }
+    .leader-photo { width:100%; max-width:170px; aspect-ratio:3/4; margin:0 auto 12px; border-radius:10px; background:#edf3ed; display:grid; place-items:center; color:#526454; border:1px dashed #b7c8b8; padding:8px; }
+    .leader-photo img { width:100%; height:100%; object-fit:cover; border-radius:8px; }
+    .leader-card strong { display:block; }
+    .leader-card p { color:var(--muted); font-size:.9rem; margin:6px 0 0; }
     .initiative-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
     .initiative { border:1px solid var(--line); border-radius:13px; padding:15px; background:#fff; }
     .initiative .symbol { font-size:1.55rem; margin-bottom:5px; }
     .initiative strong { display:block; color:#17472a; }
     .contact-strip { background:#14532d; color:white; border-radius:14px; padding:17px 19px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:20px; }
     .contact-strip a { color:white; font-weight:700; overflow-wrap:anywhere; }
-    @media(max-width:700px) { .stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .initiative-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media(max-width:420px) { .initiative-grid { grid-template-columns:1fr; } }
+    @media(max-width:700px) { .leader-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .header-leadership { grid-template-columns:repeat(2,minmax(0,1fr)); } .stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .initiative-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:420px) { .initiative-grid { grid-template-columns:1fr; } .header-leader { align-items:flex-start; flex-direction:column; } .header-leader img { width:58px; height:72px; } }
     h1 { font-size:clamp(1.5rem,3vw,2.25rem); line-height:1.25; margin:0 0 5px; }
     .subtitle { margin:0; opacity:.92; }
     button, .button { border:0; border-radius:10px; padding:11px 15px; font:inherit; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; justify-content:center; align-items:center; gap:8px; }
@@ -92,16 +104,25 @@
       <button class="language" id="languageToggle" type="button" aria-label="Switch language">বাংলা দেখুন</button>
     </div>
     <div class="official-logos" aria-label="Government and programme logos">
-      <img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura logo">
-      <img src="assets/panchayati-raj-logo.jpeg" alt="Panchayati Raj, Government of India logo">
+      <a href="https://panchayat.tripura.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Panchayat Department, Government of Tripura"><img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura logo"></a>
+      <a href="https://panchayat.gov.in/en/" target="_blank" rel="noopener noreferrer" aria-label="Ministry of Panchayati Raj, Government of India"><img src="assets/panchayati-raj-logo.jpeg" alt="Panchayati Raj, Government of India logo"></a>
       <img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat logo">
-      <img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura logo">
+      <a href="https://aamarsarkar.tripura.gov.in/signin.php" target="_blank" rel="noopener noreferrer" aria-label="Amar Sarkar portal"><img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura logo"></a>
+    </div>
+    <div class="header-leadership-title" data-en="Leadership and Governance" data-bn="নেতৃত্ব ও প্রশাসন">Leadership and Governance</div>
+    <div class="header-leadership" aria-label="National and state leadership">
+      <div class="header-leader"><img src="assets/prime-minister-narendra-modi.jpg" alt="Shri Narendra Modi"><div><strong data-en="Shri Narendra Modi" data-bn="শ্রী নরেন্দ্র মোদি">Shri Narendra Modi</strong><span data-en="Prime Minister of India" data-bn="ভারতের প্রধানমন্ত্রী">Prime Minister of India</span></div></div>
+      <div class="header-leader"><img src="assets/rajiv-ranjan-singh.jpeg" alt="Shri Rajiv Ranjan Singh"><div><strong data-en="Shri Rajiv Ranjan Singh" data-bn="শ্রী রাজীব রঞ্জন সিং">Shri Rajiv Ranjan Singh</strong><span data-en="Union Cabinet Minister of Panchayati Raj" data-bn="কেন্দ্রীয় পঞ্চায়েতি রাজ মন্ত্রী">Union Cabinet Minister of Panchayati Raj</span></div></div>
+      <div class="header-leader"><img src="assets/chief-minister-manik-saha.jpg" alt="Prof. (Dr.) Manik Saha"><div><strong data-en="Prof. (Dr.) Manik Saha" data-bn="অধ্যাপক (ড.) মানিক সাহা">Prof. (Dr.) Manik Saha</strong><span data-en="Chief Minister of Tripura" data-bn="ত্রিপুরার মুখ্যমন্ত্রী">Chief Minister of Tripura</span></div></div>
+      <div class="header-leader"><img src="assets/kishor-barman.jpg" alt="Shri Kishor Barman"><div><strong data-en="Shri Kishor Barman" data-bn="শ্রী কিশোর বর্মন">Shri Kishor Barman</strong><span data-en="Cabinet Minister, Government of Tripura" data-bn="মন্ত্রিসভার মন্ত্রী, ত্রিপুরা সরকার">Cabinet Minister, Government of Tripura</span></div></div>
     </div>
   </header>
   <nav aria-label="Main navigation">
     <div class="navinner">
       <a href="#home" data-en="Home" data-bn="হোম">Home</a>
       <a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে">About Us</a>
+      <a href="#statistics" data-en="Statistics" data-bn="পরিসংখ্যান">Statistics</a>
+      <a href="#leadership" data-en="Leadership" data-bn="নেতৃত্ব">Leadership</a>
       <a href="#services" data-en="Citizen Services" data-bn="নাগরিক পরিষেবা">Citizen Services</a>
       <a href="#notices" data-en="Notices" data-bn="বিজ্ঞপ্তি">Notices</a>
       <a href="#gallery" data-en="Development Gallery" data-bn="উন্নয়ন গ্যালারি">Development Gallery</a>
@@ -162,17 +183,19 @@
       </div>
     </section>
 
-    <div class="section-title">
+    <div class="section-title" id="statistics">
       <div>
-        <h2 data-en="Government and Programme Initiatives" data-bn="সরকারি ও কর্মসূচির লোগো">Government and Programme Initiatives</h2>
-        <p data-en="Official and programme logos provided for the website." data-bn="ওয়েবসাইটের জন্য সরবরাহ করা সরকারি ও কর্মসূচির লোগো।">Official and programme logos provided for the website.</p>
+        <h2 data-en="Tarakpur GP at a Glance" data-bn="এক নজরে তারকপুর গ্রাম পঞ্চায়েত">Tarakpur GP at a Glance</h2>
+        <p data-en="Selected service and development figures. Figures may be updated as official records change." data-bn="পরিষেবা ও উন্নয়ন সংক্রান্ত কিছু তথ্য। সরকারি নথি অনুযায়ী সময়ে সময়ে এই তথ্য হালনাগাদ করা হতে পারে।">Selected service and development figures. Figures may be updated as official records change.</p>
       </div>
     </div>
-    <section class="logo-grid" aria-label="Government and programme logos">
-      <div class="logo-card"><img src="assets/tripura-government-logo.jpeg" alt="Government of Tripura"><strong data-en="Government of Tripura" data-bn="ত্রিপুরা সরকার">Government of Tripura</strong></div>
-      <div class="logo-card"><img src="assets/panchayati-raj-logo.jpeg" alt="Ministry of Panchayati Raj, Government of India"><strong data-en="Ministry of Panchayati Raj, Government of India" data-bn="পঞ্চায়েতি রাজ মন্ত্রক, ভারত সরকার">Ministry of Panchayati Raj, Government of India</strong></div>
-      <div class="logo-card"><img src="assets/women-friendly-panchayat-logo.jpeg" alt="Model Women Friendly Panchayat"><strong data-en="Model Women Friendly Panchayat" data-bn="মডেল নারী-বান্ধব পঞ্চায়েত">Model Women Friendly Panchayat</strong></div>
-      <div class="logo-card"><img src="assets/amar-sarkar-logo.jpeg" alt="Amar Sarkar, Government of Tripura"><strong data-en="Amar Sarkar, Government of Tripura" data-bn="আমার সরকার, ত্রিপুরা সরকার">Amar Sarkar, Government of Tripura</strong></div>
+    <section class="stats-grid" aria-label="Development statistics">
+      <div class="stat"><strong>6</strong><span data-en="Anganwadi Centres" data-bn="অঙ্গনওয়াড়ি কেন্দ্র">Anganwadi Centres</span></div>
+      <div class="stat"><strong>354</strong><span data-en="PMAY-G Houses Completed" data-bn="সম্পূর্ণ PMAY-G বাড়ি">PMAY-G Houses Completed</span></div>
+      <div class="stat"><strong>390</strong><span data-en="Tap Connections" data-bn="নল সংযোগ">Tap Connections</span></div>
+      <div class="stat"><strong>50</strong><span data-en="Self-Help Groups (SHGs)" data-bn="স্বনির্ভর গোষ্ঠী (SHG)">Self-Help Groups (SHGs)</span></div>
+      <div class="stat"><strong>2</strong><span data-en="Village Organisations" data-bn="গ্রাম সংগঠন">Village Organisations</span></div>
+      <div class="stat"><strong>34</strong><span data-en="Solar and LED Streetlights" data-bn="সৌর ও LED পথবাতি">Solar and LED Streetlights</span></div>
     </section>
 
     <div class="section-title" id="services">
@@ -226,7 +249,7 @@
       <article class="card">
         <div class="symbol" aria-hidden="true">📷</div>
         <h3 data-en="Photographs of Development Works" data-bn="উন্নয়নমূলক কাজের আলোকচিত্র">Photographs of Development Works</h3>
-        <p data-en="Open the shared folder to view available photographs. Add approved public photographs to this folder to keep it updated." data-bn="উপলব্ধ ছবি দেখতে শেয়ার করা ফোল্ডার খুলুন। আপডেট রাখার জন্য অনুমোদিত জনসাধারণের কাজের ছবি এই ফোল্ডারে যোগ করুন।">Open the shared folder to view available photographs. Add approved public photographs to this folder to keep it updated.</p>
+        <p data-en="Explore photographs of development projects, public facilities and community activities undertaken in Tarakpur Gram Panchayat." data-bn="তারকপুর গ্রাম পঞ্চায়েতের উন্নয়নমূলক প্রকল্প, জনসাধারণের সুবিধা এবং বিভিন্ন সামাজিক কার্যক্রমের ছবি দেখুন।">Explore photographs of development projects, public facilities and community activities undertaken in Tarakpur Gram Panchayat.</p>
         <a class="button primary" href="https://drive.google.com/drive/folders/1-pyPiK1Tyo_3RnOm3g6rvk6UXfpdC69N?usp=sharing" target="_blank" rel="noopener" data-en="Open Photo Gallery ↗" data-bn="ছবির গ্যালারি খুলুন ↗">Open Photo Gallery ↗</a>
       </article>
     </section>
@@ -234,18 +257,18 @@
     <div class="section-title" id="beneficiaries">
       <div>
         <h2 data-en="Beneficiary Information" data-bn="উপভোক্তা সংক্রান্ত তথ্য">Beneficiary Information</h2>
-        <p data-en="Use the official folder to consult beneficiary lists made available for public access." data-bn="জনসাধারণের জন্য প্রকাশিত উপভোক্তা তালিকা দেখতে নির্দিষ্ট ফোল্ডারটি ব্যবহার করুন।">Use the official folder to consult beneficiary lists made available for public access.</p>
+        <p data-en="View beneficiary lists and scheme-related information officially published for public reference by Tarakpur Gram Panchayat." data-bn="তারকপুর গ্রাম পঞ্চায়েতের পক্ষ থেকে জনসাধারণের অবগতির জন্য প্রকাশিত উপভোক্তা তালিকা ও প্রকল্প-সংক্রান্ত তথ্য দেখুন।">View beneficiary lists and scheme-related information officially published for public reference by Tarakpur Gram Panchayat.</p>
       </div>
     </div>
     <section class="notice">
       <div>
-        <strong data-en="Beneficiary List Folder" data-bn="উপভোক্তা তালিকার ফোল্ডার">Beneficiary List Folder</strong>
-        <p data-en="Please verify that each file is intended for public disclosure before sharing it." data-bn="কোনও ফাইল শেয়ার করার আগে সেটি জনসাধারণের জন্য প্রকাশযোগ্য কি না যাচাই করুন।">Please verify that each file is intended for public disclosure before sharing it.</p>
+        <strong data-en="Public Beneficiary Information" data-bn="জনসাধারণের জন্য উপভোক্তা সংক্রান্ত তথ্য">Public Beneficiary Information</strong>
+        <p data-en="Open the folder to view available beneficiary lists and related public information." data-bn="উপলব্ধ উপভোক্তা তালিকা ও সংশ্লিষ্ট জনসাধারণের তথ্য দেখতে ফোল্ডারটি খুলুন।">Open the folder to view available beneficiary lists and related public information.</p>
       </div>
-      <a class="button secondary" href="https://drive.google.com/drive/u/0/folders/1Jmn_tk8_em-SxfUb1oRVm4XKEG0iGCds" target="_blank" rel="noopener" data-en="Open Beneficiary Folder ↗" data-bn="উপভোক্তা তালিকা খুলুন ↗">Open Beneficiary Folder ↗</a>
+      <a class="button secondary" href="https://drive.google.com/drive/u/0/folders/1Jmn_tk8_em-SxfUb1oRVm4XKEG0iGCds" target="_blank" rel="noopener" data-en="View Beneficiary Information ↗" data-bn="উপভোক্তা সংক্রান্ত তথ্য দেখুন ↗">View Beneficiary Information ↗</a>
     </section>
 
-    <p class="privacy" data-en="Privacy notice: Do not publish Aadhaar numbers, bank account details, personal phone numbers, signatures or other sensitive personal information. Publish only beneficiary information that the competent authority has approved for public disclosure. Submission receipt numbers and acknowledgements are managed by the connected Google Forms and their existing scripts." data-bn="গোপনীয়তা সংক্রান্ত নোটিশ: আধার নম্বর, ব্যাঙ্ক অ্যাকাউন্টের তথ্য, ব্যক্তিগত ফোন নম্বর, স্বাক্ষর বা অন্যান্য সংবেদনশীল ব্যক্তিগত তথ্য প্রকাশ করবেন না। কেবলমাত্র উপযুক্ত কর্তৃপক্ষের অনুমোদিত উপভোক্তা তথ্য প্রকাশ করুন। আবেদন গ্রহণ নম্বর ও স্বীকৃতিপত্র সংযুক্ত Google Forms এবং তার বিদ্যমান স্ক্রিপ্টের মাধ্যমে পরিচালিত হবে।">Privacy notice: Do not publish Aadhaar numbers, bank account details, personal phone numbers, signatures or other sensitive personal information. Publish only beneficiary information that the competent authority has approved for public disclosure. Submission receipt numbers and acknowledgements are managed by the connected Google Forms and their existing scripts.</p>
+    <p class="privacy" data-en="Public information notice: Only beneficiary information approved for public disclosure is provided here. Personal identification numbers, bank details, private phone numbers and other sensitive personal information are not intended for public display." data-bn="জনসাধারণের তথ্য সংক্রান্ত বিজ্ঞপ্তি: এখানে কেবলমাত্র জনসাধারণের জন্য প্রকাশের অনুমোদনপ্রাপ্ত উপভোক্তা সংক্রান্ত তথ্য দেওয়া হয়েছে। আধার নম্বর, ব্যাঙ্কের তথ্য, ব্যক্তিগত ফোন নম্বর বা অন্যান্য সংবেদনশীল ব্যক্তিগত তথ্য প্রকাশের জন্য নয়।">Public information notice: Only beneficiary information approved for public disclosure is provided here. Personal identification numbers, bank details, private phone numbers and other sensitive personal information are not intended for public display.</p>
   </main>
   <footer>
     <div class="footinner">
